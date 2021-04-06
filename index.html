@@ -152,6 +152,65 @@
     </div>
         <div class="row" id="houses">
         </div>
+
+
+        <div class="col">
+            <h1>Jobs
+                <!-- Button trigger modal -->
+                <button title="Open Create Job Form" type="button" class="btn btn-outline-success"
+                    data-toggle="modal" data-target="#new-job-form">
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                </button>
+            </h1>
+        </div>
+
+        <div class="modal fade" id="new-job-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Job</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- when submitted run the function provided
+                this can be triggered by the button or the enter key -->
+                <form onsubmit="app.jobsController.createJob()">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" class="form-control" id="company" placeholder="Company..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Job Title</label>
+                            <input type="text" class="form-control" id="title" placeholder="Job Title..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Job Description</label>
+                            <input type="text" class="form-control" id="description" placeholder="Description..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hours">Hours per Week</label>
+                            <input type="number" class="form-control" id="hours" placeholder="Number of Hours..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rate">Hourly Rate</label>
+                            <input type="number" class="form-control" id="rate" placeholder="Rate..." required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="row" id="jobs">
+        </div>
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
